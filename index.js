@@ -1,5 +1,5 @@
-const { ApolloServer, gql } = require("apollo-server-micro");
-const db = require("./lib/db");
+const { ApolloServer, gql } = require('apollo-server-micro');
+const db = require('./lib/db');
 
 const typeDefs = gql`
   type Query {
@@ -25,15 +25,15 @@ const resolvers = {
       return db.query(`
         SELECT * FROM advertisements ORDER BY id LIMIT ${limit.toString()}
       `);
-    }
-  }
+    },
+  },
 };
 
 const server = new ApolloServer({
   typeDefs,
   resolvers,
   introspection: true,
-  playground: true
+  playground: true,
 });
 
 module.exports = server.createHandler();
