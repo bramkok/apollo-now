@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "alias": "tweakers-api.adsl.world",
-  "builds": [{ "src": "index.js", "use": "@now/node" }],
-  "routes": [{ "src": "/.*", "dest": "index.js" }],
+  "alias": "tweakers.adsl.world",
+  "builds": [{ "src": "api/index.js", "use": "@now/node" }],
+  "routes": [{ "src": "/api/.*", "dest": "api/index.js" }],
   "regions": ["bru"],
   "env": {
     "MYSQL_HOST": "@mysql_host",
