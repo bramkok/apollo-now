@@ -5,7 +5,9 @@
   "main": "index.js",
   "dependencies": {
     "apollo-server-micro": "^2.5.0",
-    "graphql": "^14.3.1"
+    "graphql": "^14.3.1",
+    "serverless-mysql": "^1.4.0",
+    "sql-template-strings": "^2.2.2"
   },
   "devDependencies": {},
   "scripts": {
