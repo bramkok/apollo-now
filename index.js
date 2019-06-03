@@ -21,9 +21,9 @@ const typeDefs = gql`
 
 const resolvers = {
   Query: {
-    advertisements: async (root, args, context) => {
+    advertisements: (root, args, context) => {
       const limit = args.limit || 25;
-      return await db.query(
+      return db.query(
         "SELECT * FROM `advertisements` ORDER BY `id` LIMIT " + limit.toString()
       );
     },
