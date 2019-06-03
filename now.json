@@ -3,10 +3,12 @@
   "builds": [{ "src": "index.js", "use": "@now/node" }],
   "routes": [{ "src": "/.*", "dest": "index.js" }],
   "regions": ["bru"],
-  "env": {
-    "MYSQL_HOST": "@mysql_host",
-    "MYSQL_USER": "@mysql_user",
-    "MYSQL_PASSWORD": "@mysql_password",
-    "MYSQL_DATABASE": "@mysql_database"
+  "build": {
+    "env": {
+      "MYSQL_HOST": "@mysql_host",
+      "MYSQL_USER": "@mysql_user",
+      "MYSQL_PASSWORD": "@mysql_password",
+      "MYSQL_DATABASE": "@mysql_database"
+    }
   }
 }
