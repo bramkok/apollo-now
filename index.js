@@ -4,7 +4,6 @@ const db = require("./lib/db");
 const typeDefs = gql`
   type Query {
     advertisements(limit: Int): [Advertisement!]!
-    user: String
   }
 
   scalar Date
@@ -23,13 +22,9 @@ const resolvers = {
   Query: {
     advertisements: (root, args, context) => {
       const limit = args.limit || 25;
-      return db.query(
-        "SELECT * FROM `advertisements` ORDER BY `id` LIMIT " + limit.toString()
-      );
-    },
-    user: (root, args, context) => {
-      console.log(process.env.MYSQL_USER);
-      return process.env.MYSQL_USER;
+      return db.query(`
+        SELECT * FROM advertisements ORDER BY id LIMIT ${limit.toString()}
+      `);
     }
   }
 };
