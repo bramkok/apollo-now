@@ -21,6 +21,7 @@
       "dest": "www/static/$1"
     },
     { "src": "/favicon.ico", "dest": "www/favicon.ico" },
+    { "src": "/robots.txt", "dest": "www/robots.txt" },
     { "src": "/precache-manifest.(.*)", "dest": "www/precache-manifest.$1" },
     {
       "src": "/service-worker.js",
