@@ -36,4 +36,4 @@ const server = new ApolloServer({
   playground: true,
 });
 
-module.exports = server.createHandler({ path: '/api' });
+module.exports = server.createHandler();
